@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: luisjrodriguezlinuxtweetapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: luisjrodriguezlinuxtweetapp
+  template:
+    metadata:
+      labels:
+        app: luisjrodriguezlinuxtweetapp 
+    spec:
+      containers:
+        - name: luisjrodriguezlinuxtweetapp 
+          image: demojalaregistry.azurecr.io/luisjrodriguezlinuxtweetapp
+          ports:
+          - containerPort: 80
